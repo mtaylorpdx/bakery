@@ -29,7 +29,7 @@ namespace Bakery
 
     Console.Write("Enter the number of pastries: ");
     string pastryCountString = Console.ReadLine();
-    if (NumberCheck(breadCountString))
+    if (NumberCheck(pastryCountString))
     {
       pastryOrder.SetPastryQuantity(int.Parse(pastryCountString));
     }
@@ -39,8 +39,8 @@ namespace Bakery
 
     Console.WriteLine($@"
           Your total order comes to:
-            {breadCountString} Loaves: ${breadTotal}
-            {pastryCountString} Pastries: ${pastryTotal}
+            {breadCountString} loaves: ${breadTotal}
+            {pastryCountString} pastries: ${pastryTotal}
             Total: ${breadTotal + pastryTotal}
             ");
     }
