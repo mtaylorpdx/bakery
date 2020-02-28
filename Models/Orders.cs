@@ -15,7 +15,6 @@ namespace Bakery.Models
     public void SetBreadQuantity(int number)
     {
       BreadQuantity = number;
-      Console.WriteLine(BreadQuantity);
       SetBreadPrice();
     }
 
@@ -28,7 +27,10 @@ namespace Bakery.Models
           BreadPrice += 5;
         }
       }
-      Console.WriteLine("$" + BreadPrice);
+    }
+    public int BreadPriceTotal()
+    {
+      return BreadPrice;
     }
   }
 
@@ -44,7 +46,6 @@ namespace Bakery.Models
     public void SetPastryQuantity(int number)
     {
       PastryQuantity = number;
-      Console.WriteLine(PastryQuantity);
       SetPastryPrice();
     }
     public void SetPastryPrice()
@@ -60,7 +61,10 @@ namespace Bakery.Models
           PastryPrice += 2;
         }
       }
-      Console.WriteLine("$" + PastryPrice);
+    }
+    public int PastryPriceTotal()
+    {
+      return PastryPrice;
     }
   }
 }

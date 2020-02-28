@@ -28,6 +28,11 @@ namespace Bakery
 
     breadOrder.SetBreadQuantity(int.Parse(breadCountString));
     pastryOrder.SetPastryQuantity(int.Parse(pastryCountString));
+
+    int breadTotal = breadOrder.BreadPriceTotal();
+    int pastryTotal = pastryOrder.PastryPriceTotal();
+
+    Console.WriteLine(breadTotal + " " + pastryTotal);
     }
   }
 }
