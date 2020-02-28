@@ -3,22 +3,28 @@ namespace Bakery.Models
   public class Bread
   {
     public int BreadQuantity { get; set; }
+    public int RyeQuantity { get; set; }
     public int BreadPrice { get; set; }
 
-    public Bread(int breadQuantity, int breadPrice)
+    public Bread()
     {
-      BreadQuantity = breadQuantity;
-      BreadPrice = breadPrice;
+      BreadQuantity = 0;
+      RyeQuantity = 0;
+      BreadPrice = 0;
     }
     public void SetBreadQuantity(int number)
     {
-      BreadQuantity = number;
-      SetBreadPrice();
+      BreadQuantity += number;
+    }
+    public void SetRyeQuantity(int number)
+    {
+      RyeQuantity += number;
     }
 
     public void SetBreadPrice()
     {
-      for (int i = 1; i <= BreadQuantity; i++)
+      int total = BreadQuantity + RyeQuantity;
+      for (int i = 1; i <= total; i++)
       {
         if (i % 3 != 0)
         {
@@ -36,10 +42,10 @@ namespace Bakery.Models
   {
     public int PastryQuantity { get; set; }
     public int PastryPrice { get; set; }
-    public Pastry(int pastryQuantity, int pastryPrice)
+    public Pastry()
     {
-      PastryQuantity = pastryQuantity;
-      PastryPrice = pastryPrice;
+      PastryQuantity = 0;
+      PastryPrice = 0;
     }
     public void SetPastryQuantity(int number)
     {
