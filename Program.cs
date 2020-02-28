@@ -27,8 +27,6 @@ namespace Bakery
     Console.Write("Enter the number of pastries: ");
     string pastryCountString = Console.ReadLine();
     pastryOrder.SetPastryQuantity(int.Parse(pastryCountString));
-
-    Console.WriteLine();
     }
   }
 }
