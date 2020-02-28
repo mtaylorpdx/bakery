@@ -7,9 +7,10 @@ namespace Bakery.Models
     public int BreadQuantity { get; set; }
     public int BreadPrice { get; set; }
 
-    public Bread()
+    public Bread(int breadQuantity, int breadPrice)
     {
-      BreadQuantity = 0;
+      BreadQuantity = breadQuantity;
+      BreadPrice = breadPrice;
     }
     public void SetBreadQuantity(int number)
     {
@@ -20,7 +21,10 @@ namespace Bakery.Models
 
     public void SetBreadPrice()
     {
-    BreadPrice = (BreadQuantity * 5);
+    if (BreadQuantity != 0)
+    {
+      BreadPrice = (BreadQuantity * 5);
+    }
     Console.WriteLine("$" + BreadPrice);
     }
   }
@@ -29,9 +33,10 @@ namespace Bakery.Models
   {
     public int PastryQuantity { get; set; }
     public int PastryPrice { get; set; }
-    public Pastry()
+    public Pastry(int pastryQuantity, int pastryPrice)
     {
-      PastryQuantity = 0;
+      PastryQuantity = pastryQuantity;
+      PastryPrice = pastryPrice;
     }
     public void SetPastryQuantity(int number)
     {
@@ -41,8 +46,8 @@ namespace Bakery.Models
     }
     public void SetPastryPrice()
     {
-    PastryPrice = (PastryQuantity * 2);
-    Console.WriteLine("$" + PastryPrice);
+      PastryPrice = (PastryQuantity * 2);
+      Console.WriteLine("$" + PastryPrice);
     }
   }
 }
