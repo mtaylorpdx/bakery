@@ -49,7 +49,17 @@ namespace Bakery.Models
     }
     public void SetPastryPrice()
     {
-      PastryPrice = (PastryQuantity * 2);
+      for (int i = 1; i <= PastryQuantity; i++)
+      {
+        if (i % 3 == 0)
+        {
+          PastryPrice += 1;
+        }
+        else
+        {
+          PastryPrice += 2;
+        }
+      }
       Console.WriteLine("$" + PastryPrice);
     }
   }
