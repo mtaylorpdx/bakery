@@ -22,21 +22,38 @@ namespace Bakery
 
     Console.Write("Enter the number of loaves: ");
     string breadCountString = Console.ReadLine();
+    if (NumberCheck(breadCountString))
+    {
+      breadOrder.SetBreadQuantity(int.Parse(breadCountString));
+    }
 
     Console.Write("Enter the number of pastries: ");
     string pastryCountString = Console.ReadLine();
+    if (NumberCheck(breadCountString))
+    {
+      pastryOrder.SetPastryQuantity(int.Parse(pastryCountString));
+    }
 
-    breadOrder.SetBreadQuantity(int.Parse(breadCountString));
-    pastryOrder.SetPastryQuantity(int.Parse(pastryCountString));
-
-    int breadTotal = breadOrder.BreadPriceTotal();
-    int pastryTotal = pastryOrder.PastryPriceTotal();
-
+      int breadTotal = breadOrder.BreadPriceTotal();
+      int pastryTotal = pastryOrder.PastryPriceTotal();
+      
     Console.WriteLine($@"
           Your total order comes to:
             {breadCountString} loaves: ${breadTotal}
             {pastryCountString} pastries: ${pastryTotal}
             ");
+    }
+    static bool NumberCheck(string inputQuantity)
+    {
+      bool success = int.TryParse(inputQuantity, out _);
+      if(success)
+      {
+        return true;
+      }
+      else 
+      {
+        return false;
+      }
     }
   }
 }
