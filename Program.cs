@@ -6,7 +6,14 @@ namespace Bakery
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(@"
+
+                    Welcome to Pierre's!
+
+            ######################################
+            #  Bread Loaves $5   #  Pastries $2  #
+            #  Buy 2 Get 1 Free  #   3 for $5    #
+            ######################################");
         }
     }
 }
