@@ -10,6 +10,10 @@ namespace Bakery.Models
     {
       BreadQuantity = 0;
     }
+    public void SetBreadQuantity(int number)
+    {
+      BreadQuantity = number;
+    }
   }
 
   public class Pastry
@@ -18,6 +22,10 @@ namespace Bakery.Models
     public Pastry()
     {
       PastryQuantity = 0;
+    }
+    public void SetPastryQuantity(int number)
+    {
+      PastryQuantity = number;
     }
   }
 }
