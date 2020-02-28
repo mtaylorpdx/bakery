@@ -21,11 +21,14 @@ namespace Bakery.Models
 
     public void SetBreadPrice()
     {
-    if (BreadQuantity != 0)
-    {
-      BreadPrice = (BreadQuantity * 5);
-    }
-    Console.WriteLine("$" + BreadPrice);
+      for (int i = 1; i <= BreadQuantity; i++)
+      {
+        if (i % 3 != 0)
+        {
+          BreadPrice += 5;
+        }
+      }
+      Console.WriteLine("$" + BreadPrice);
     }
   }
 
