@@ -24,23 +24,23 @@ namespace Bakery
       
     static void LoadScreen()
     {
-          Console.WriteLine(@"
+      Console.Clear();
+      Console.WriteLine(@"
 
-    ##################################################
+      ##################################################
 
-                    Welcome to Pierre's!
-                'Stop and Smell the Flours'
+                      Welcome to Pierre's!
+                  'Stop and Smell the Flours'
 
-    ##################################################
-    #     Bread Loaves $5        Pastries $2 each    #
-    #     Buy 2 Get 1 Free          or 3 for $5      #
-    ##################################################
-    ");
+      ##################################################
+      #     Bread Loaves $5        Pastries $2 each    #
+      #     Buy 2 Get 1 Free          or 3 for $5      #
+      ##################################################
+      ");
     }
 
     static bool Menu(Bread breadOrder, Pastry pastryOrder)
     {
-      Console.Clear();
       Console.WriteLine("Enter 'B' for standard, 'R' for rye, 'P' for pastry");
       Console.WriteLine("Or 'C' to checkout");
       string userResponseInput = Console.ReadLine();
