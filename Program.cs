@@ -32,7 +32,11 @@ namespace Bakery
     int breadTotal = breadOrder.BreadPriceTotal();
     int pastryTotal = pastryOrder.PastryPriceTotal();
 
-    Console.WriteLine(breadTotal + " " + pastryTotal);
+    Console.WriteLine($@"
+          Your total order comes to:
+            {breadCountString} loaves: ${breadTotal}
+            {pastryCountString} pastries: ${pastryTotal}
+            ");
     }
   }
 }
