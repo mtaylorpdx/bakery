@@ -17,6 +17,7 @@ _This project application is an exercise in C# classes using console._
 | Application offers 'buy 2 get 1 free' discount on Bread | Buy 3 at $5 each | $10 total |
 | Application offers discount deal on Pastry | Buy 1 at $2 | Buy 3 at $2 each | $5 total |
 
+
 ## Setup/Installation Requirements
 
 * Open Terminal

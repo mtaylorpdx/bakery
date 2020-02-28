@@ -41,8 +41,9 @@ namespace Bakery
 
     static bool Menu(Bread breadOrder, Pastry pastryOrder)
     {
-      Console.WriteLine("Enter 'B' for standard, 'R' for rye, 'P' for pastry");
-      Console.WriteLine("Or 'C' to checkout");
+      Console.WriteLine("  Enter 'B' for standard loaves, 'R' for rye, 'P' for pastry");
+      Console.WriteLine("       Build your order as you go! Or 'C' to checkout");
+      Console.WriteLine("          Made a mistake? Enter 'Q' to start over");
       string userResponseInput = Console.ReadLine();
       string response = userResponseInput.ToLower();
       if (response == "b")
@@ -74,6 +75,11 @@ namespace Bakery
           pastryOrder.SetPastryQuantity(int.Parse(pastryCountString));
         }
         return false;
+      }
+      else if (response == "q")
+      {
+        breadOrder.ClearBreadOrder();
+        pastryOrder.ClearPastryOrder();
       }
       else if (response == "c")
       {

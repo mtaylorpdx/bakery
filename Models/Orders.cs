@@ -36,6 +36,12 @@ namespace Bakery.Models
     {
       return BreadPrice;
     }
+    public void ClearBreadOrder()
+    {
+      BreadQuantity = 0;
+      RyeQuantity = 0;
+      BreadPrice = 0;
+    }
   }
 
   public class Pastry
@@ -69,6 +75,11 @@ namespace Bakery.Models
     public int PastryPriceTotal()
     {
       return PastryPrice;
+    }
+    public void ClearPastryOrder()
+    {
+      PastryQuantity = 0;
+      PastryPrice = 0;
     }
   }
 }
