@@ -40,6 +40,7 @@ namespace Bakery
 
     public static bool Menu(Bread breadOrder, Pastry pastryOrder)
     {
+      Console.Clear();
       Console.WriteLine(@"  
       Enter 'B' for standard loaves, 'R' for rye, 'P' for pastry
        Build your order as you go! Or 'C' to checkout
