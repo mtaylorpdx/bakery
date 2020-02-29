@@ -1,6 +1,6 @@
 # _Bakery Orders_
 
-#### _Epicodus Week 7 solo project, 2/28/2020_
+#### _Epicodus Week 8 solo project, 2/28/2020_
 
 #### By _Matt Taylor_
 
