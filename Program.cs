@@ -37,7 +37,7 @@ namespace Bakery
       ##################################################
       ");
     }
-
+    
     public static bool Menu(Bread breadOrder, Pastry pastryOrder)
     {
       Console.Clear();
@@ -48,7 +48,6 @@ namespace Bakery
           ");
       Console.WriteLine($"    Current order: Standard Loaves - {breadOrder.BreadQuantity}  Rye Loaves - {breadOrder.RyeQuantity}  Pastries - {pastryOrder.PastryQuantity}");
       Console.WriteLine("");
-      Console.ResetColor();
       string userResponseInput = Console.ReadLine();
       string response = userResponseInput.ToLower();
       if (response == "b")
