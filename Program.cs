@@ -5,11 +5,10 @@ namespace Bakery
 {
   class Program
   {
-    static void Main()
+    public static void Main()
     {
       Bread breadOrder = new Bread();
       Pastry pastryOrder = new Pastry();
-
       LoadScreen();
       bool checkout = false;
       while (checkout == false)
@@ -22,7 +21,7 @@ namespace Bakery
       }
     }
       
-    static void LoadScreen()
+    public static void LoadScreen()
     {
       Console.Clear();
       Console.WriteLine(@"
@@ -39,7 +38,7 @@ namespace Bakery
       ");
     }
 
-    static bool Menu(Bread breadOrder, Pastry pastryOrder)
+    public static bool Menu(Bread breadOrder, Pastry pastryOrder)
     {
       Console.WriteLine("  Enter 'B' for standard loaves, 'R' for rye, 'P' for pastry");
       Console.WriteLine("       Build your order as you go! Or 'C' to checkout");
@@ -101,7 +100,7 @@ namespace Bakery
         return false;
       }
 
-    static bool NumberCheck(string inputQuantity)
+    public static bool NumberCheck(string inputQuantity)
     {
       bool success = int.TryParse(inputQuantity, out _);
       if(success)
