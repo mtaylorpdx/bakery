@@ -40,9 +40,14 @@ namespace Bakery
 
     public static bool Menu(Bread breadOrder, Pastry pastryOrder)
     {
-      Console.WriteLine("  Enter 'B' for standard loaves, 'R' for rye, 'P' for pastry");
-      Console.WriteLine("       Build your order as you go! Or 'C' to checkout");
-      Console.WriteLine("          Made a mistake? Enter 'Q' to start over");
+      Console.WriteLine(@"  
+      Enter 'B' for standard loaves, 'R' for rye, 'P' for pastry
+       Build your order as you go! Or 'C' to checkout
+          Made a mistake? Enter 'Q' to start over
+          ");
+      Console.WriteLine($"    Current order: Standard Loaves - {breadOrder.BreadQuantity}  Rye Loaves - {breadOrder.RyeQuantity}  Pastries - {pastryOrder.PastryQuantity}");
+      Console.WriteLine("");
+      Console.ResetColor();
       string userResponseInput = Console.ReadLine();
       string response = userResponseInput.ToLower();
       if (response == "b")
